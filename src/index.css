@@ -83,6 +83,31 @@ h1 {
         font-size: 18px;
     }
 
+    .header {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    h1 {
+        width: 40%;
+    }
+
+    .form {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input {
+        width: 350px;
+        margin: 0 5px 0 0;
+        font-size: 1.1rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+    }
+
     .main {
         grid-template-columns: repeat(6, 1fr);
     }

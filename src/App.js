@@ -36,7 +36,7 @@ function App() {
       <div className="main">
         {list.map((color, index) => {
           return (
-            <Color key={index} {...color} />
+            <Color key={index} {...color} index={index} />
           )
         })}
       </div>

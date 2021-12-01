@@ -1,16 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
 body {
-    background-color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
+    color: #333;
+    background-color: rgb(236, 242, 245);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 15vh;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    display: block;
+    width: 220px;
+    margin-bottom: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn {
+    width: 80px;
+    padding: 5px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: tomato;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(180, 27, 0);
 }
 
 .error {
-    border: solid red 1px;
-    color: rgb(red, green, blue)
+    border: solid red 2px;
 }
 
 .main {
@@ -22,9 +71,18 @@ body {
 .color {
     width: 100%;
     height: 100px;
+    padding: 20px 30px;
+}
+
+.perc {
+    margin-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
+    :root {
+        font-size: 18px;
+    }
+
     .main {
         grid-template-columns: repeat(6, 1fr);
     }

@@ -14,7 +14,7 @@ function App() {
     e.preventDefault()
     try {
       let colors = new Values(color).all(10)
-      console.log(colors)
+      setError(false)
     }
     catch (error) {
       setError(true)
@@ -27,7 +27,7 @@ function App() {
       <div className="header">
         <h1>Color Generator</h1>
         <form className="form" onSubmit={handleSubmit}>
-          <input type="text" className="input" placeholder="#af30ee" onChange={e => setColor(e.target.value)} />
+          <input type="text" className={`input ${error && 'error'}`} placeholder="#af30ee" value={color} onChange={e => setColor(e.target.value)} />
           <button className="btn" type="submit">Submit</button>
         </form>
       </div>

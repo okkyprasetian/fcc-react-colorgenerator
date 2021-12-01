@@ -1,7 +1,6 @@
-function Color() {
+function Color({ rgb, weight }) {
     return (
-        <div className="color">
-            Color
+        <div className="color" style={{ backgroundColor: `rgb(${rgb})` }}>
         </div>
     );
 }

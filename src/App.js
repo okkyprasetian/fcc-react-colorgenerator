@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Color from './components/Color'
 import Values from 'values.js'
 
 
@@ -14,6 +15,7 @@ function App() {
     e.preventDefault()
     try {
       let colors = new Values(color).all(10)
+      setList(colors)
       setError(false)
     }
     catch (error) {
@@ -32,6 +34,11 @@ function App() {
         </form>
       </div>
       <div className="main">
+        {list.map((color, index) => {
+          return (
+            <Color key={index} {...color} />
+          )
+        })}
       </div>
     </div>
   );
